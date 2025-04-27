@@ -17,54 +17,33 @@ Proyek ini adalah aplikasi manajemen inventory berbasis Laravel yang memungkinka
 
 ## ⚙️ Teknologi yang Digunakan
 
-- **Laravel 10**
-- **MySQL**
-- **Vite + Bootstrap/Blade**
-- **Docker + Docker Compose**
+- **Laravel 12**
+- **Laravel Sail**
+- **MariaDB**
+
 
 ## 🚀 Cara Menjalankan
 
-### 🔧 Jalankan via Docker (disarankan)
+### 🔧 Jalankan via Laravel Sail (disarankan)
 
 1. **Clone repository**
    ```bash
-   git clone  https://github.com/tata-afk/UTS---SisiServer.git
+   git clone https://github.com/tata-afk/UTS---SisiServer.git
    ```
 
-2. **Salin file konfigurasi lingkungan**
+2. **Salin file konfigurasi lingkungan dan setup lingkungan development**
    ```bash
-   cp .env.example .env
+   cp .env.example .env # lalu sesuaikan .env 
+   docker run --rm --interactive --tty -v $(pwd):/app composer install
+   ./vendor/bin/sail up -d
+   ./vendor/bin/sail artisan key:generate
+   ./vendor/bin/sail artisan migrate --seed
    ```
 
-3. **Bangun dan jalankan container**
-   ```bash
-   docker-compose up -d --build
+3. **Buka di browser**
    ```
-
-4. **Akses container dan jalankan migrasi**
-   ```bash
-   docker exec -it app php artisan migrate --seed
+   http://localhost:8900
    ```
-
-5. **Buka di browser**
-   ```
-   http://localhost:8000
-   ```
-
-### 💻 Alternatif: Jalankan secara lokal (tanpa Docker)
-
-```bash
-composer install
-npm install && npm run dev
-
-cp .env.example .env
-php artisan key:generate
-
-# Setup database di .env lalu jalankan
-php artisan migrate --seed
-
-php artisan serve
-```
 
 ## 🧩 Struktur Proyek
 
