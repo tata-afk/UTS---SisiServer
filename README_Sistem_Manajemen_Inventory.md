@@ -28,8 +28,8 @@ Proyek ini adalah aplikasi manajemen inventory berbasis Laravel yang memungkinka
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/username/sistem-manajemen-inventory.git
-   cd sistem-manajemen-inventory
+   git clone  https://github.com/tata-afk/UTS---SisiServer.git
+   cd UTS---SisiServer
    ```
 
 2. **Salin file konfigurasi lingkungan**
