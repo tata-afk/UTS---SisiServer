@@ -28,8 +28,7 @@ Proyek ini adalah aplikasi manajemen inventory berbasis Laravel yang memungkinka
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/username/sistem-manajemen-inventory.git
-   cd sistem-manajemen-inventory
+   git clone  https://github.com/tata-afk/UTS---SisiServer.git
    ```
 
 2. **Salin file konfigurasi lingkungan**
@@ -85,6 +84,7 @@ php artisan serve
 ## 👨‍💻 Kontributor
 
 - Octaviana Sholikhah – A11.2022.14640
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
