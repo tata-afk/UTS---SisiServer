@@ -1,40 +1,60 @@
-📦 Sistem Manajemen Inventory
+
+# 📦 Sistem Manajemen Inventory
+
 Proyek ini adalah aplikasi manajemen inventory berbasis Laravel yang memungkinkan pengguna untuk mencatat, mengelola, dan memantau stok barang. Dibuat sebagai bagian dari tugas UTS mata kuliah Pemrograman Sistem Server.
 
-✨ Fitur
-✅ Create + Read Data Item
-✅ Create + Read Data Kategori
-✅ Create + Read Data Supplier
-📊 Ringkasan Stok
-Total stok barang
-Total nilai stok (harga × jumlah)
-Rata-rata harga barang
-🚨 Barang Hampir Habis
-Menampilkan item dengan stok < 5 unit
-⚙️ Teknologi yang Digunakan
-Laravel 10
-MySQL
-Vite + Bootstrap/Blade
-Docker + Docker Compose
-🚀 Cara Menjalankan
-🔧 Jalankan via Docker (disarankan)
-Clone repository
+## ✨ Fitur
 
-git clone https://github.com/username/sistem-manajemen-inventory.git
-cd sistem-manajemen-inventory
-Salin file konfigurasi lingkungan
+- ✅ **Create + Read Data Item**
+- ✅ **Create + Read Data Kategori**
+- ✅ **Create + Read Data Supplier**
+- 📊 **Ringkasan Stok**
+  - Total stok barang
+  - Total nilai stok (`harga × jumlah`)
+  - Rata-rata harga barang
+- 🚨 **Barang Hampir Habis**
+  - Menampilkan item dengan stok < 5 unit
 
-cp .env.example .env
-Bangun dan jalankan container
+## ⚙️ Teknologi yang Digunakan
 
-docker-compose up -d --build
-Akses container dan jalankan migrasi
+- **Laravel 10**
+- **MySQL**
+- **Vite + Bootstrap/Blade**
+- **Docker + Docker Compose**
 
-docker exec -it app php artisan migrate --seed
-Buka di browser
+## 🚀 Cara Menjalankan
 
-http://localhost:8000
-💻 Alternatif: Jalankan secara lokal (tanpa Docker)
+### 🔧 Jalankan via Docker (disarankan)
+
+1. **Clone repository**
+   ```bash
+   git clone https://github.com/username/sistem-manajemen-inventory.git
+   cd sistem-manajemen-inventory
+   ```
+
+2. **Salin file konfigurasi lingkungan**
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Bangun dan jalankan container**
+   ```bash
+   docker-compose up -d --build
+   ```
+
+4. **Akses container dan jalankan migrasi**
+   ```bash
+   docker exec -it app php artisan migrate --seed
+   ```
+
+5. **Buka di browser**
+   ```
+   http://localhost:8000
+   ```
+
+### 💻 Alternatif: Jalankan secara lokal (tanpa Docker)
+
+```bash
 composer install
 npm install && npm run dev
 
@@ -45,19 +65,27 @@ php artisan key:generate
 php artisan migrate --seed
 
 php artisan serve
-🧩 Struktur Proyek
-app/Models – Model untuk Item, Category, Supplier
-app/Http/Controllers – Logic CRUD
-resources/views – Blade views
-routes/web.php – Routing aplikasi
-docker-compose.yml – Konfigurasi Docker
-🧮 Alur Ringkasan Perhitungan
-Total Stok: Penjumlahan seluruh stok item.
-Total Nilai Stok: Penjumlahan harga × stok semua item.
-Rata-Rata Harga: Total harga seluruh item dibagi jumlah item.
-Barang Hampir Habis: Filter item dengan stok < 5.
-👨‍💻 Kontributor
-Octaviana Sholikhah – A11.2022.14640
+```
+
+## 🧩 Struktur Proyek
+
+- `app/Models` – Model untuk Item, Category, Supplier
+- `app/Http/Controllers` – Logic CRUD
+- `resources/views` – Blade views
+- `routes/web.php` – Routing aplikasi
+- `docker-compose.yml` – Konfigurasi Docker
+
+## 🧮 Alur Ringkasan Perhitungan
+
+- **Total Stok:** Penjumlahan seluruh `stok` item.
+- **Total Nilai Stok:** Penjumlahan `harga × stok` semua item.
+- **Rata-Rata Harga:** Total harga seluruh item dibagi jumlah item.
+- **Barang Hampir Habis:** Filter item dengan `stok < 5`.
+
+## 👨‍💻 Kontributor
+
+- Octaviana Sholikhah – A11.2022.14640
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
